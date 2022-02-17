@@ -1,0 +1,20 @@
+input.onSound(DetectedSound.Loud, function () {
+    counter += 1
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    basic.showIcon(IconNames.Asleep)
+    if (counter > 3) {
+        music.playMelody("C5 A B G A F G E ", 120)
+        basic.showIcon(IconNames.Angry)
+    } else if (counter > 2) {
+        soundExpression.sad.playUntilDone()
+        basic.showIcon(IconNames.Confused)
+    } else {
+        basic.showIcon(IconNames.Sad)
+    }
+})
+let counter = 0
+counter = 0
+basic.showIcon(IconNames.Happy)
+basic.forever(function () {
+	
+})
